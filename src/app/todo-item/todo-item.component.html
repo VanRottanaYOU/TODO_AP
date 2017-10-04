@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <h4 [class.barree]="todo.action" >{{todo?.titre | uppercase}} {{todo?.action}}</h4>
+  </div>
+
+  <div>
+    <input type="checkbox" [(ngModel)]="todo.action" (change)="onChange()">
+  </div>
+
+</div>

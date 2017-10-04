@@ -1,0 +1,15 @@
+<div>
+  <app-todo-form (sendTodoEmitter)="handleFormationSelected($event)" (delTodoEmitter)="deleteAllTodos(i)" ></app-todo-form>
+  <ul>
+    <li *ngFor="let todo of listeTodos">
+      <app-todo-item [todo]="todo"></app-todo-item>
+    </li>
+  </ul>
+
+  <p>nombre de TODO : {{listeTodos.length}}</p>
+
+  <div *ngIf="isDisplay">
+    <p>"Vous n’avez aucun todo"</p>
+  </div>
+
+</div>
