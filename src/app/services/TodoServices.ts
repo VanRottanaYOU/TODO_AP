@@ -1,7 +1,7 @@
 import Formation from '../classes/Todo';
 import Todo from '../classes/Todo';
 
-export default class TodoServices {
+export class TodoServices {
    
     ListeDeTodos : Array<Todo> = new Array();
     
@@ -14,7 +14,7 @@ export default class TodoServices {
     }
     
     addTodo(monTodo:Todo) {
-        this.ListeDeTodos.push(monTodo);
+        return [monTodo, ...this.ListeDeTodos]
     }
 
     getTodo(): Array<Todo> {

@@ -6,7 +6,9 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import {FormsModule} from "@angular/forms";
-import TodoServices from "./services/TodoServices";
+import {TodoServices} from "./services/TodoServices";
+import {GithubApiService} from "./services/github-api.service";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import TodoServices from "./services/TodoServices";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    TodoServices
+    TodoServices,
+    GithubApiService
   ],
   bootstrap: [AppComponent]
 })
