@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import {TodoServices} from "./services/TodoServices";
 import {GithubApiService} from "./services/github-api.service";
 import { HttpClientModule } from '@angular/common/http';
+import {ApiServiceService} from "./services/api-service.service"
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     TodoServices,
-    GithubApiService
+    GithubApiService,
+    ApiServiceService
   ],
   bootstrap: [AppComponent]
 })

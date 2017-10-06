@@ -5,16 +5,17 @@ export class TodoServices {
    
     ListeDeTodos : Array<Todo> = new Array();
     
-    deleteOneTodo(){
+    /*deleteOneTodo(){
         this.ListeDeTodos.unshift();
-    }
+    }*/
 
     deleteAllTodos(){
         this.ListeDeTodos =[];
     }
     
     addTodo(monTodo:Todo) {
-        return [monTodo, ...this.ListeDeTodos]
+        this.ListeDeTodos.unshift(monTodo);
+        //return [monTodo, ...this.ListeDeTodos];
     }
 
     getTodo(): Array<Todo> {
